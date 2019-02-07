@@ -1,4 +1,11 @@
 <template>
+<head>
+  <link href="/static/favicon" rel="shortcut icon" type="image/ico">
+</head>
+</template>
+
+
+<template>
   <div class="container">
     <b-navbar class="navbar" toggleable="md" type="dark" variant="dark" string="top">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
@@ -25,7 +32,86 @@
         <h1 strong class="text-white title">Kerwin Yen</h1>
       </div>
     </div>
-    <div class="self-introduction"></div>
+    <div class="cta-down">
+      <img src>
+    </div>
+
+    <div>
+      <b-card-group columns>
+        <b-card
+          title="Card title that wraps to a new line"
+          img-src="https://placekitten.com/g/400/450"
+          img-fluid
+          img-alt="image"
+          img-top
+        >
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </b-card>
+        <b-card
+          title="Card title that wraps to a new line"
+          img-src="https://placekitten.com/g/400/450"
+          img-fluid
+          img-alt="image"
+          img-top
+        >
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </b-card>
+        <b-card
+          title="Card title that wraps to a new line"
+          img-src="https://placekitten.com/g/400/450"
+          img-fluid
+          img-alt="image"
+          img-top
+        >
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </b-card>
+        <b-card
+          title="Card title that wraps to a new line"
+          img-src="https://placekitten.com/g/400/450"
+          img-fluid
+          img-alt="image"
+          img-top
+        >
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </b-card>
+        <b-card
+          title="Card title that wraps to a new line"
+          img-src="https://placekitten.com/g/400/450"
+          img-fluid
+          img-alt="image"
+          img-top
+        >
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </b-card>
+        <b-card
+          title="Card title that wraps to a new line"
+          img-src="https://placekitten.com/g/400/450"
+          img-fluid
+          img-alt="image"
+          img-top
+        >
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </b-card>
+      </b-card-group>
+    </div>
   </div>
 </template>
 
@@ -80,6 +166,12 @@
   background-image: url("https://i.imgur.com/WCwXGbD.jpg");
   min-height: 100vh;
   background-size: cover;
+}
+
+.cta-down {
+  top: 200 px;
+  left: 300 px;
+  z-index: 1;
 }
 </style>
 
