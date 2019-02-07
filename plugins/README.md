@@ -1,7 +1,14 @@
-# PLUGINS
+import Vue from 'vue';
+import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm';
+import App from 'App.vue';
 
-**This directory is not required, you can delete it if you don't want to use it.**
+// Import the styles directly. (Or you could add them via script tags.)
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 
-This directory contains Javascript plugins that you want to run before mounting the root Vue.js application.
+Vue.use(BootstrapVue);
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/plugins).
+new Vue({
+  el: '#app',
+  render: h => h(App)
+});

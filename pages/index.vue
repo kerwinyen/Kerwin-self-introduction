@@ -21,8 +21,8 @@
       <div
         class="d-flex flex-column text-center justify-content-center align-items-center bg-banner"
       >
-        <h1 class="text-white subtitle">Hi, Im</h1>
-        <strong class="text-white title">Kerwin Yen</strong>
+        <p class="text-white subtitle">Hi, Im</p>
+        <h1 strong class="text-white title">Kerwin Yen</h1>
       </div>
     </div>
     <div class="self-introduction"></div>
@@ -59,8 +59,8 @@
 
 .title {
   position: "absolute";
-  top: 700px;
-  left: 300px;
+  top: 500px;
+  left: 200px;
   z-index: 1;
 }
 
