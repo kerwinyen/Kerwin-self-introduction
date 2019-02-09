@@ -34,7 +34,9 @@
           <h1 strong class="text-white title">Kerwin Yen</h1>
         </div>
       </div>
-      <div class="line"></div>
+      <div class="line">
+        <hr class=".style-six">
+      </div>
       <div class="cta-down">
         <img src>
       </div>
@@ -238,6 +240,13 @@ export default {
 
 
 <style>
+hr.style-six {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+}
+
 .container {
   max-width: 100%;
   height: auto;
