@@ -1,6 +1,14 @@
 <template>
   <div class="container">
-    <b-navbar class="navbar" toggleable="md" type="dark" variant="dark" string="top">
+    <b-navbar-nav
+      class="navbar"
+      navbar-fixed-top
+      toggleable="md"
+      type="dark"
+      variant="dark"
+      string="top"
+      navbar-expand-lg
+    >
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
       <b-navbar-brand href="#">
@@ -10,12 +18,12 @@
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item href="#">Profoilo</b-nav-item>
-          <b-nav-item href="#" disabled>Connect</b-nav-item>
+          <b-nav-item href="#">Connect</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
       </b-collapse>
-    </b-navbar>
+    </b-navbar-nav>
 
     <div>
       <b-card-group columns>
@@ -73,11 +81,8 @@
 }
 
 .navbar {
-  position: absolute;
-  max-width: 100％;
-  height: 40px;
-  margin: 0px;
-  padding: 0px;
+  max-width: 100%;
+  width: 1000px;
 }
 
 .background {

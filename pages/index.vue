@@ -1,18 +1,26 @@
 <template>
-  <b-container>
-    <div class="container bg-light">
+  <b-container class="container" bg-light bg-expand>
+    <div>
       <b-navbar class="navbar" toggleable="md" type="dark" variant="dark" string="top">
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-        <b-navbar-brand href="http://localhost:3000/#profolio" navbar>
+        <b-navbar-brand navbar position="relative">
           <img class="logo" src="https://i.imgur.com/eAvQcvd.png">
         </b-navbar-brand>
 
         <b-collapse is-nav id="nav_collapse">
           <b-navbar-nav>
-            <b-nav-item href="#">Profoilo</b-nav-item>
-            <b-nav-item href="#profolio" disabled>Connect</b-nav-item>
+            <b-nav-item href="#">關於我</b-nav-item>
+            <b-nav-item href="#">網頁設計</b-nav-item>
+            <b-nav-item href="#">平面設計</b-nav-item>
+            <b-nav-item href="#">內容專欄</b-nav-item>
+            <b-nav-item href="#">聯絡我</b-nav-item>
           </b-navbar-nav>
+
+          <b-nav-form>
+            <b-form-input size="sm" class="mr-sm-2" type="text" placeholder="Search" right/>
+            <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
+          </b-nav-form>
 
           <!-- Right aligned nav items -->
         </b-collapse>
@@ -26,6 +34,7 @@
           <h1 strong class="text-white title">Kerwin Yen</h1>
         </div>
       </div>
+      <div class="line"></div>
       <div class="cta-down">
         <img src>
       </div>
@@ -33,11 +42,24 @@
         <h1 class>Get into my brain</h1>
       </div>
 
-      <b-container class="p-3 mb-2 bv-example-row introdction-colum">
+      <b-container class="skill-bar" p-3 mb-2>
+        <b-row>
+          <b-col>
+            <div col="4" position="relative">
+              <h2 strong>網頁設計</h2>
+            </div>
+            <div col="8" position="relative">
+              <b-progress :value="counter" :max="max" show-progress animated></b-progress>
+            </div>
+          </b-col>
+        </b-row>
+      </b-container>
+
+      <b-container class="bv-example-row introdction-colum" p-3 mb-2>
         <b-row>
           <b-col>
             <div class="introdction-title strong" col="8">
-              <h2>My advice to new grads, after two years in the wild</h2>
+              <h2>關於我</h2>
             </div>
             <div class="introdction-subtitle text-success">Published May 16, 2017</div>
             <div class="introdction-text">
@@ -68,7 +90,7 @@
         <b-row>
           <b-col>
             <div class="introdction-title strong">
-              <h2 href>front-end＆UX Design</h2>
+              <h2 href>網頁設計</h2>
             </div>
             <div class="introdction-subtitle text-success">Published May 16, 2016</div>
             <div class="introdction-text">
@@ -94,7 +116,7 @@
         <b-row>
           <b-col>
             <div class="introdction-title strong">
-              <h2>My advice to new grads, after two years in the wild</h2>
+              <h2>攝影剪輯</h2>
             </div>
             <div class="introdction-subtitle text-success">Published May 16, 2017</div>
             <div class="introdction-text">
@@ -120,7 +142,7 @@
         <b-row>
           <b-col>
             <div class="introdction-title strong">
-              <h2>My advice to new grads, after two years in the wild</h2>
+              <h2>內容專欄</h2>
             </div>
             <div class="introdction-subtitle text-success">Published May 16, 2017</div>
             <div class="introdction-text">
@@ -197,7 +219,23 @@
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      counter: 60,
+      max: 100
+    };
+  },
+  methods: {
+    clicked() {
+      this.counter = Math.random() * this.max;
+      console.log("Change progress to " + Math.round(this.counter * 100) / 100);
+    }
+  }
+};
 </script>
+
+
 
 <style>
 .container {
@@ -223,6 +261,7 @@
   margin: 0px;
   padding: 0px;
   z-index: -1;
+  min-width: 30%;
 }
 
 .title {
